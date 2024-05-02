@@ -46,7 +46,7 @@ numbers of returned orders for each month
 */
 -- total numbers of returns
 -- group by month orders
--- LEFT JOIN 
+-- JOIN 
 
 select EXTRACT(MONTH from o.orderdate) as Month_num, Count(r.returnid) as return_order from orders as o
 join returns as r on o.orderid=r.orderid
